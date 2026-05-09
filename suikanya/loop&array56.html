@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Looping Over Objects and Arrays</title>
+</head>
+<body>
+  <h1>JavaScript Looping Demo</h1>
+  <p>Open the console to see the output.</p>
+
+  <script>
+    // 1. Create a simple object with three items
+    let person = {
+      name: "Alice",
+      age: 25,
+      city: "Bhubaneshwar"
+    };
+
+    // 2. Using for...in loop to get property names and values
+    console.log("Object properties:");
+    for (let key in person) {
+      console.log(key + ": " + person[key]);
+    }
+
+    // 3. Create an array with the same three items
+    let personArray = ["Alice", 25, "Bhubaneshwar"];
+
+    // Using for loop
+    console.log("Array values with for loop:");
+    for (let i = 0; i < personArray.length; i++) {
+      console.log(personArray[i]);
+    }
+
+    // Using for...in loop
+    console.log("Array values with for...in loop:");
+    for (let index in personArray) {
+      console.log(personArray[index]);
+    }
+  </script>
+</body>
+</html>

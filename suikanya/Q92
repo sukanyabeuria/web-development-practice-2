@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Break Example</title>
+</head>
+<body>
+  <h2>Open your browser console to see the output</h2>
+
+  <script>
+    
+    for (let i = 0; i < 10; i++) {
+      console.log(i);   
+      if (i === 4) {    
+        break;          
+      }
+    }
+  </script>
+</body>
+</html>

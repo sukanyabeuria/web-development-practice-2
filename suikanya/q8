@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang ="en">
+    <head>
+        <title>change the bsckground color</title>
+    
+    <body>
+        
+        <button oneclick="start()">start</button>
+        <button oneclick="stop()">stop</button>
+
+        <script>
+            var time;
+            function start(){
+                time=setInterval(change, 1000);
+            }
+           function stop(){
+            clearInterval(time);
+           }
+            const colors = ["red", "blue", "green", "yellow", "purple", "orange"];
+    var i = 0;
+
+    function change() {
+        if(i>=colors.length)i=0;
+      document.body.style='background-color:'+colors[i];
+      i++;
+      
+    }
+
+    
+  
+  </script>
+</head>
+<body>
+  <h1>Background changes every second!</h1>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Div Hover Example</title>
+  <style>
+    #divvy {
+      width: 100px;
+      height: 100px;
+      background-color: rgb(201, 13, 164);
+      text-align: center;
+      line-height: 100px;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function changeColor() {
+      document.getElementById("divvy").style.backgroundColor = "blue";
+    }
+  </script>
+</head>
+<body>
+  <div id="divvy" onmouseover="changeColor()">
+    Hover me!
+  </div>
+</body>
+</html>

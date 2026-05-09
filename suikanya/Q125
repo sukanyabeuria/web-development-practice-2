@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number.isInteger Demo</title>
+</head>
+<body>
+  <h2>Check if values are integers</h2>
+  <script>
+    let x = 10;
+    console.log(Number.isInteger(x)); 
+
+    let y = -10;
+    console.log(Number.isInteger(y));
+
+    let z = "integer";
+    console.log(Number.isInteger(z)); 
+    
+    let s = 0;
+    console.log(Number.isInteger(s)); 
+    
+  </script>
+</body>
+</html>

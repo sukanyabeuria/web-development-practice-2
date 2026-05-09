@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q2 - do...while Loop</title>
+</head>
+<body>
+  <h2>Q2: Print numbers 0 to 30 (step 3)</h2>
+  <pre id="output2"></pre>
+
+  <script>
+    let arr = [];
+    let sum = 0;
+    let i = 0;
+
+    do {
+      arr.push(i);
+      sum += i;
+      i += 3;
+    } while (i <= 30);
+
+    document.getElementById("output2").textContent =
+      "Numbers: " + arr.join(", ") + "\nSum: " + sum;
+  </script>
+</body>
+</html>

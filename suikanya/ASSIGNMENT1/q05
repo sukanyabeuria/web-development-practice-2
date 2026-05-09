@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q6 - Convert Text to Number</title>
+</head>
+<body>
+  <h2>Q6: Convert Mixed Text Number to Numeric Value</h2>
+
+  <label>Enter a number in words (10–1000): </label>
+  <input type="text" id="textInput" placeholder="e.g. one hundred twenty four">
+  <button onclick="convertText()">Convert</button>
+
+  <p id="result"></p>
+
+  <script>
+    function convertText() {
+      let text = document.getElementById("textInput").value.toLowerCase().trim();
+      let result = "";
+
+      // Example mappings (extend with more if-else as needed)
+      if (text === "ten") result = 10;
+      else if (text === "eleven") result = 11;
+      else if (text === "twelve") result = 12;
+      else if (text === "twenty") result = 20;
+      else if (text === "one hundred") result = 100;
+      else if (text === "one hundred twenty four") result = 124;
+      else if (text === "five hundred") result = 500;
+      else if (text === "one thousand") result = 1000;
+      else result = "Not mapped. Add more if-else cases.";
+
+      document.getElementById("result").textContent = "Numeric Value: " + result;
+    }
+  </script>
+</body>
+</html>

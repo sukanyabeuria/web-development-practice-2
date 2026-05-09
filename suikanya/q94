@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>While Loop Example</title>
+</head>
+<body>
+  <h2>Open your browser console to see the output</h2>
+
+  <script>
+    
+    let superLongArray = [10, 15, 20, 25, 42, 50, 60];
+
+    
+    while (true) {
+      if (superLongArray[0] != 42 && superLongArray.length > 0) {
+        superLongArray.shift(); 
+      } else {
+        console.log("Found 42!");
+        break;                  
+      }
+    }
+
+                                                                  
+    console.log("Remaining array:", superLongArray);
+  </script>
+</body>
+</html>

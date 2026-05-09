@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loop Calculation Example</title>
+</head>
+<body>
+  <h2>Calculated Results</h2>
+  <div id="output"></div>
+
+  <script>
+    
+    let resultsArr = [];
+
+   
+    function addTwoNumbers(a, b) {
+      return a + b;
+    }
+
+    
+    for (let i = 0; i < 10; i++) {
+      let firstValue = i * 5;    
+      let secondValue = i * i;  
+      let result = addTwoNumbers(firstValue, secondValue);
+      resultsArr.push(result);
+    }
+
+    
+    console.log(resultsArr);
+
+    
+    document.getElementById("output").innerText = resultsArr.join(", ");
+  </script>
+</body>
+</html>

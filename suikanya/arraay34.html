@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Car Object Example</title>
+</head>
+<body>
+  <h1>Open your browser console to see the car object</h1>
+
+  <script>
+    
+    let myCar = {
+      make: "Toyota",
+      model: "Corolla",
+      year: 2020,
+      color: "Blue",
+      isElectric: false,
+      mileage: 35000,
+      owner: "Alex"
+    };
+
+    
+    console.log("Car object:", myCar);
+
+    
+    console.log("Make:", myCar.make);
+    console.log("Model:", myCar.model);
+    console.log("Year:", myCar.year);
+    console.log("Color:", myCar.color);
+    console.log("Is Electric:", myCar.isElectric);
+    console.log("Mileage:", myCar.mileage);
+    console.log("Owner:", myCar.owner);
+
+    
+    myCar.getDescription = function() {
+      return this.year + " " + this.make + " " + this.model + " (" + this.color + ")";
+    };
+
+   
+    console.log("Car Description:", myCar.getDescription());
+  </script>
+</body>
+</html>

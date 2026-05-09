@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ask Age Prompt</title>
+</head>
+<body>
+  <button onclick="askAge()">Enter Your Age</button>
+
+  <p id="output"></p>
+
+  <script>
+    function askAge() {
+      let ageInput = prompt("Please enter your age:");
+      if (ageInput !== null && ageInput.trim() !== "") {
+        
+        let age = parseInt(ageInput, 10);
+
+       
+        if (!isNaN(age)) {
+          document.getElementById("output").textContent = 
+            "You entered: " + age + " years old.";
+        } else {
+          document.getElementById("output").textContent = 
+            "That doesn't look like a valid number.";
+        }
+      } else {
+        document.getElementById("output").textContent = 
+          "No age provided.";
+      }
+    }
+  </script>
+</body>
+</html>

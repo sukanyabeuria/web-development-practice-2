@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Name Description</title>
+</head>
+<body>
+  <h1>Random Name Descriptor</h1>
+  <!-- Button comes first, but script is loaded after the body -->
+  <button onclick="describeName()">Click to Describe a Name</button>
+
+  <script>
+    // 1. Array of descriptive words
+    const words = ["brilliant", "kind", "creative", "strong", "funny", "thoughtful", "amazing", "unique"];
+
+    // 2. Function that prompts for a name
+    function describeName() {
+      let name = prompt("Enter a name:");
+
+      // 3. Pick a random word
+      let randomWord = words[Math.floor(Math.random() * words.length)];
+
+      // 4. Output result
+      console.log(name + " is " + randomWord + "!");
+      alert(name + " is " + randomWord + "!"); // optional popup
+    }
+  </script>
+</body>
+</html>

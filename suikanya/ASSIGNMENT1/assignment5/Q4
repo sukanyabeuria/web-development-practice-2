@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q4 - Object Properties</title>
+</head>
+<body>
+  <h2>Q4: Display object properties with for...in</h2>
+  <pre id="output4"></pre>
+
+  <script>
+    let student = {
+      name: "Rahul",
+      age: 21,
+      course: "B.Tech"
+    };
+
+    let out4 = "";
+    for (let prop in student) {
+      out4 += prop + ": " + student[prop] + "\n";
+    }
+
+    document.getElementById("output4").textContent = out4;
+  </script>
+</body>
+</html>

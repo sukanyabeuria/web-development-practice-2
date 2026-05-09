@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Person Class Example</title>
+</head>
+<body>
+  <h1>Check the Console Output</h1>
+
+  <script>
+    
+    class Person {
+      constructor(firstname, lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+      }
+    }
+
+    
+    let friend1 = new Person("Alice", "Johnson");
+
+    
+    let friend2 = new Person("Bob", "Smith");
+
+    
+    console.log("Hello " + friend1.firstname + " " + friend1.lastname);
+    console.log("Hello " + friend2.firstname + " " + friend2.lastname);
+  </script>
+</body>
+</html>

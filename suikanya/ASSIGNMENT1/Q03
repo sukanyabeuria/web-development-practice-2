@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q4 - If-Else from Ternary</title>
+</head>
+<body>
+  <h2>Q4: If-Else Equivalent of Ternary Expression</h2>
+  <pre id="output"></pre>
+
+  <script>
+    
+    let age = 20;
+    let citizen = true;
+    let criminal -= false;
+
+    if (age >= 18) {
+      if (citizen) {
+        if (!criminal) {
+          out += "Eligible\n";
+        } else {
+          out += "Disqualified\n";
+        }
+      } else {
+        out += "Not Citizen\n";
+      }
+    } else {
+      out += "Minor\n";
+    }
+
+    document.getElementById("output").textContent = out;
+  </script>
+</body>
+</html>

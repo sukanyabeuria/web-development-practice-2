@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Tracking App</title>
+</head>
+<body>
+  <h1>Employee Tracking App</h1>
+  <pre id="output"></pre>
+
+  <script>
+    // 1. Create a class with first name, last name, and years worked
+    class Employee {
+      constructor(firstname, lastname, yearsWorked) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.yearsWorked = yearsWorked;
+      }
+    }
+
+    // 3. Add a prototype method to return details
+    Employee.prototype.getDetails = function() {
+      return `${this.firstname} ${this.lastname} has worked at the company for ${this.yearsWorked} years.`;
+    };
+
+    // 2. Create employees and put them in an array
+    let employees = [
+      new Employee("Alice", "Johnson", 5),
+      new Employee("Bob", "Smith", 10),
+      new Employee("Charlie", "Brown", 3)
+    ];
+
+    // 4. Iterate and output results
+    employees.forEach(emp => {
+      console.log(emp.getDetails());   // Console output
+      document.getElementById("output").textContent += emp.getDetails() + "\n";
+      console.log(emp);                // Entire object in console
+    });
+  </script>
+</body>
+</html>

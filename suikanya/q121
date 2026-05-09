@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vehicle Class Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    label { display: block; margin-top: 10px; }
+    button { margin-top: 10px; }
+    #output { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Vehicle Demo</h1>
+
+  <label for="color">Color:</label>
+  <input type="text" id="color" placeholder="Enter vehicle color">
+
+  <label for="speed">Current Speed:</label>
+  <input type="number" id="speed" placeholder="Enter current speed">
+
+  <label for="maxSpeed">Max Speed:</label>
+  <input type="number" id="maxSpeed" placeholder="Enter max speed">
+
+  <button onclick="createVehicle()">Create Vehicle</button>
+  <button onclick="accelerateVehicle()">Accelerate by 10</button>
+  <button onclick="moveVehicle()">Move</button>
+
+  <div id="output"></div>
+
+  <script>
+    class Vehicle { 
+      constructor(color, currentSpeed, maxSpeed) { 
+        this.color = color; 
+        this.currentSpeed = currentSpeed; 
+        this.maxSpeed = maxSpeed; 
+      } 
+      move() { 
+        console.log("moving at", this.currentSpeed); 
+        return `Moving at ${this.currentSpeed} km/h`; 
+      } 
+      accelerate(amount) { 
+        this.currentSpeed += amount; 
+        if (this.currentSpeed > this.maxSpeed) {
+          this.currentSpeed = this.maxSpeed;
+        }
+      } 
+    }
+
+    let vehicle;
+
+    function createVehicle() {
+      const color = document.getElementById('color').value;
+      const speed = parseInt(document.getElementById('speed').value);
+      const maxSpeed = parseInt(document.getElementById('maxSpeed').value);
+      vehicle = new Vehicle(color, speed, maxSpeed);
+      document.getElementById('output').textContent = 
+        `Vehicle created: Color ${vehicle.color}, Speed ${vehicle.currentSpeed}, Max ${vehicle.maxSpeed}`;
+    }
+
+    function accelerateVehicle() {
+      if (!vehicle) {
+        document.getElementById('output').textContent = "No vehicle created yet!";
+        return;
+      }
+      vehicle.accelerate(10);
+      document.getElementById('output').textContent = 
+        `Vehicle accelerated: Current speed is ${vehicle.currentSpeed}`;
+    }
+
+    function moveVehicle() {
+      if (!vehicle) {
+        document.getElementById('output').textContent = "No vehicle created yet!";
+        return;
+      }
+      document.getElementById('output').textContent = vehicle.move();
+    }
+  </script>
+</body>
+</html>

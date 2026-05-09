@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animal Class Demo</title>
+</head>
+<body>
+  <script>
+    
+    class Animal {
+      constructor(species, sound) {
+        this.species = species;
+        this.sound = sound;
+      }
+
+      
+      makeSound() {
+        console.log(this.species + " says " + this.sound);
+      }
+    }
+
+    // Step 2: Create two animals
+    let dog = new Animal("Dog", "Woof");
+    let cat = new Animal("Cat", "Meow");
+
+    
+    Animal.prototype.action = function() {
+      console.log(this.species + " is running!");
+    };
+
+    
+    dog.makeSound();   
+    cat.makeSound();   
+
+    dog.action();     
+    cat.action();      
+
+    
+    console.log(dog);
+    console.log(cat);
+  </script>
+</body>
+</html>

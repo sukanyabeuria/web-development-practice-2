@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Loop Example</title>
+</head>
+<body>
+  <h1>JavaScript For Loop Demo</h1>
+  <p>Open your browser console to see the output.</p>
+
+  <script>
+    // Define an array
+    let arr = [10, 20, 30, 40, 50];
+
+    // Standard for loop
+    for (let i = 0; i < arr.length; i++) {
+      console.log("Index:", i, "Value:", arr[i]);
+    }
+
+    // Modern ES6 for...of loop
+    for (const value of arr) {
+      console.log("Value with for...of:", value);
+    }
+
+    // Using forEach method
+    arr.forEach((value, index) => {
+      console.log("Index:", index, "Value with forEach:", value);
+    });
+  </script>
+</body>
+</html>
+    

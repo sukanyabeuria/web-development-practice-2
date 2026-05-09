@@ -1,0 +1,23 @@
+<html>
+<body>
+    <script>
+        let str="Hi Hello";
+        let newstr=str.replace("Hello","World");
+        console.log(newstr);
+
+        //targetting string doesn't exist.
+        let newstr2=str.replace("India","Country");
+        console.log(newstr2);
+
+        //it will only chnage the first occurence by default.
+        let str1="Hi Hello Hello";
+        let newstr3=str1.replace("Hello","Dev");
+        console.log(newstr3);
+
+        //replaceAll() change all the occurences.
+        let str2="Hi Hello Hello";
+        let newstr4=str2.replaceAll("Hello","Dev");
+        console.log(newstr4);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cars Array Example</title>
+</head>
+<body>
+  <h2>Open your browser console to see the output</h2>
+
+  <script>
+    let cars = [ 
+      { model: "Golf", make: "Volkswagen", year: 1999, color: "black" }, 
+      { model: "Picanto", make: "Kia", year: 2020, color: "red" }, 
+      { model: "Peugeot", make: "208", year: 2021, color: "black" }, 
+      { model: "Fiat", make: "Punto", year: 2020, color: "black" } 
+    ];
+
+
+    for (let car of cars) {
+      console.log("Model:", car.model);
+      console.log("Make:", car.make);
+      console.log("Year:", car.year);
+      console.log("Color:", car.color);
+      console.log("-------------------");
+    }
+
+    
+    console.table(cars);
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>While Loop Safer Example</title>
+</head>
+<body>
+  <h2>Open your browser console to see the output</h2>
+
+  <script>
+    // Example array
+    let superLongArray = [10, 15, 20, 25, 42, 50];
+    let notFound = true;
+
+   
+    while (superLongArray.length > 0 && notFound) {
+      if (superLongArray[0] != 42) {
+        superLongArray.shift();  
+        console.log("Found 42!");
+        notFound = false;         
+      }
+    }
+
+    console.log("Remaining array:", superLongArray);
+  </script>
+</body>
+</html>

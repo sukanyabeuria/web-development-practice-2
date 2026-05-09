@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q5 - Multiplication Table</title>
+</head>
+<body>
+  <h2>Q5: Multiplication Table (1 to 5)</h2>
+  <pre id="output5"></pre>
+
+  <script>
+    let out5 = "";
+    for (let i = 1; i <= 5; i++) {
+      out5 += "Table of " + i + ":\n";
+      for (let j = 1; j <= 10; j++) {
+        out5 += i + " x " + j + " = " + (i * j) + "\n";
+      }
+      out5 += "\n";
+    }
+
+    document.getElementById("output5").textContent = out5;
+  </script>
+</body>
+</html>

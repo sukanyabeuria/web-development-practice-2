@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IIFE Examples</title>
+</head>
+<body>
+  <h1>IIFE Demonstration</h1>
+  <button onclick="runExamples()">Run Examples</button>
+
+  <script>
+    function runExamples() {
+      
+      (function () { 
+        console.log("Welcome"); 
+      })();
+
+      
+      (function () { 
+        let firstName = "Laurence"; 
+      })();
+
+     
+      let result = (function () { 
+        let firstName = "Laurence"; 
+        return firstName; 
+      })();
+      console.log(result);
+
+     
+      (function (firstName) { 
+        console.log("My Name is " + firstName);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+      })("Laurence");
+    }
+  </script>
+</body>
+</html>

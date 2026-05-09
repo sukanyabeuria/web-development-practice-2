@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car Object Entries</title>
+</head>
+<body>
+ 
+  <script>
+    
+    let car = {
+      model: "Civic",
+      make: "Honda",
+      year: 2020,
+      color: "Blue"
+    };
+
+    
+    for (const [key, value] of Object.entries(car)) {
+      console.log(key, ":", value);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Loop Example</title>
+</head>
+<body>
+  <h2>Results of addTwoNumbers</h2>
+  <div id="output"></div>
+
+  <script>
+    // Define the function
+    function addTwoNumbers(a, b) {
+      return a + b;
+    }
+
+    // Create an array to store results
+    let resultsArr = [];
+
+    
+    for (let i = 0; i < 10; i++) {
+      let result = addTwoNumbers(i, 2 * i);
+      resultsArr.push(result);
+    }
+
+    console.log(resultsArr);
+
+    
+    document.getElementById("output").innerText = resultsArr.join(", ");
+  </script>
+</body>
+</html>

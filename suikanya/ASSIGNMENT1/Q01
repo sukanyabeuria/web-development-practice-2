@@ -1,0 +1,29 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title>Q1 - Logical Operators</title>
+</head>
+<body>
+  <h2>Q1: Logical Operators in JavaScript</h2>
+  <pre id="output"></pre>
+
+  <script>
+    let out = "";
+
+    // Expressions
+    out += "console.log(5 && 0 && 10); => " + (5 && 0 && 10) + "\n";
+    out += "console.log(5 && 8 && 10); => " + (5 && 8 && 10) + "\n";
+    out += "console.log(0 || null || 'JS'); => " + (0 || null || "JS") + "\n";
+    out += "console.log('' || 0 || false); => " + ("" || 0 || false) + "\n\n";
+
+    // Justification
+    out += "Justification:\n";
+    out += " - '&&' returns the first falsy value, otherwise the last truthy.\n";
+    out += "   So 5 && 0 && 10 => 0, and 5 && 8 && 10 => 10.\n";
+    out += " - '||' returns the first truthy value, otherwise the last falsy.\n";
+    out += "   So 0 || null || 'JS' => 'JS', and '' || 0 || false => false.\n";
+
+    document.getElementById("output").textContent = out;
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Practice Exercise 5.8</title>
+</head>
+<body>
+  <h2>Open your browser console to see the output</h2>
+
+  <script>
+
+    let output1 = "";
+    let skipNumber = 5;
+
+    for (let i = 0; i <= 10; i++) {
+      if (i === skipNumber) {
+        continue; 
+      }
+      output1 += i;
+    }
+    console.log("Using continue:", output1);
+
+    
+    let output2 = "";
+    for (let i = 0; i <= 10; i++) {
+      if (i === skipNumber) {
+        break; 
+      }
+      output2 += i;
+    }
+    console.log("Using break:", output2);
+  </script>
+</body>
+</html>

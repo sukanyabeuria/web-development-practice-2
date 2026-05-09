@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basic Calculator</title>
+</head>
+<body>
+  <h1>Basic Calculator Demo</h1>
+
+  <script>
+  
+    let num1 = 15;
+    let num2 = 5;
+
+   
+    let operator = "add"; 
+
+    
+    function calculate(x, y, op = "add") {
+      if (op === "subtract") {
+        return x - y;
+      } else {
+        
+        return x + y;
+      }
+    }
+
+    
+    console.log("Operator:", operator, "Result:", calculate(num1, num2, operator));
+
+    
+    operator = "subtract";
+    console.log("Operator:", operator, "Result:", calculate(num1, num2, operator));
+
+
+    console.log("No operator specified, Result:", calculate(num1, num2));
+  </script>
+</body>
+</html>

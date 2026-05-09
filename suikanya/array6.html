@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sorted Names</title>
+</head>
+<body>
+  <h2>Sorted Names List</h2>
+  <ul id="nameList"></ul>
+
+  <script>
+    let names = ["James", "Alicia", "Fatiha", "Maria", "Bert"];
+    names.sort();
+
+    let list = document.getElementById("nameList");
+    for (let i = 0; i < names.length; i++) {
+      let li = document.createElement("li");
+      li.textContent = names[i];
+      list.appendChild(li);
+    }
+  </script>
+</body>
+</html>

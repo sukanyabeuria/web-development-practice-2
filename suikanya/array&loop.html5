@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Names Array Example</title>
+</head>
+<body>
+  <h1>JavaScript Array Loop Demo</h1>
+  <p>Processed names:</p>
+  <ul id="namesList"></ul>
+
+  <script>
+    let names = ["Chantal", "John", "Maxime", "Bobbi", "Jair"];  
+
+    
+    names = names
+      .filter(name => !name.startsWith("M"))
+      .map(name => "hello " + name);
+
+    console.log(names);
+
+    
+    let list = document.getElementById("namesList");
+    for (let i = 0; i < names.length; i++) {
+      let li = document.createElement("li");
+      li.textContent = names[i];
+      list.appendChild(li);
+    }
+  </script>
+</body>
+</html>

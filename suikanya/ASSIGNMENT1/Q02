@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q2 - Difference between || and ??</title>
+</head>
+<body>
+  <h2>Q2: Difference between <code>||</code> and <code>??</code></h2>
+  <pre id="output"></pre>
+
+  <script>
+    let out = "";
+
+    
+    let input = 5;
+    out += "Input = 5\n";
+    out += "input || 'Iter' => " + (input || "Iter") + "\n";
+    out += "input ?? 'Iter' => " + (input ?? "Iter") + "\n\n";
+
+    
+    input = 0;
+    out += "Input = 0\n";
+    out += "input || 'Iter' => " + (input || "Iter") + "\n";
+    out += "input ?? 'Iter' => " + (input ?? "Iter") + "\n\n";
+
+    input = "Hello";
+    out += "Input = 'Hello'\n";
+    out += "input || 'Iter' => " + (input || "Iter") + "\n";
+    out += "input ?? 'Iter' => " + (input ?? "Iter") + "\n\n";
+
+   
+    input = "";
+    out += "Input = '' (empty string)\n";
+    out += "input || 'Iter' => " + (input || "Iter") + "\n";
+    out += "input ?? 'Iter' => " + (input ?? "Iter") + "\n\n";
+
+    </script>
+</body>
+</html>

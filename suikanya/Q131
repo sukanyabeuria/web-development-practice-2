@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Capitalize Words Demo</title>
+</head>
+<body>
+  <script>
+    // Step 1: Create a Person class with firstname and lastname
+    class Person {
+      constructor(firstname, lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+      }
+    }
+
+    // Step 2: Create a variable with your friend's name
+    let friend1 = new Person("Rahul", "Sharma");
+
+    // Step 3: Add a second variable with another friend's name
+    let friend2 = new Person("Sneha", "Patel");
+
+    // Step 4: Output both friends with a greeting
+    console.log("Hello " + friend1.firstname + " " + friend1.lastname);
+    console.log("Hello " + friend2.firstname + " " + friend2.lastname);
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q5 - Classify Number</title>
+</head>
+<body>
+  <h2>Q5: Classify a Number</h2>
+
+  <label>Enter a number: </label>
+  <input type="number" id="numInput">
+  <button onclick="classifyNumber()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function classifyNumber() {
+      let num = parseInt(document.getElementById("numInput").value);
+      let result = "";
+
+      if (num === 0) {
+        result = "Zero";
+      } else {
+        if (num > 0) {
+          if (num % 2 === 0) {
+            result = "Positive Even";
+          } else {
+            result = "Positive Odd";
+          }
+        } else {
+          if (num % 2 === 0) {
+            result = "Negative Even";
+          } else {
+            result = "Negative Odd";
+          }
+        }
+      }
+
+      document.getElementById("result").textContent = result;
+    }
+  </script>
+</body>
+</html>

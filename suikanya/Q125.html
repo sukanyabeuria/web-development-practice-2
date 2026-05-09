@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number.isInteger Demo</title>
+</head>
+<body>
+  <h2>Check if values are integers</h2>
+  <script>
+    //intger or not 
+    let x = 10;
+    console.log(Number.isInteger(x)); 
+
+    let y = -10;
+    console.log(Number.isInteger(y));
+
+    let z = "integer";
+    console.log(Number.isInteger(z)); 
+    
+    let s = 0;
+    console.log(Number.isInteger(s)); 
+
+    let a = 3.4;
+    console.log(Number.isInteger(a))
+    //pi value
+    let pi = 3.14159265;
+    let newpi = pi.toFixed(2);
+    console.log(pi);
+    console.log(newpi);
+    //maximum,minimum method 
+    let k= Math.max(190, 20, 30, 40, 50, 60, 70, 80, 90);
+    console.log("Maximum value:", x);
+    let l = Math.min(10, 5, 2, 100, -20);
+    console.log("Minimum value:", y);
+    let g =Math.max(100,20,80,"10");
+    console.log("Maximum value:", g);
+    //square and power method 
+    let f= Math.sqrt(625);
+    console.log(f);
+    let t= Math.pow(23);
+    console.log(t);
+
+  </script>
+</body>
+</html>

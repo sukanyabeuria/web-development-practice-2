@@ -1,0 +1,3 @@
+let singleString = 'Hi there!';
+let doubleString = "How are you?";
+let funActivity = 'Let's learn JavaScript';

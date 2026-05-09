@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee Tracker</title>
+</head>
+<body>
+  <script>
+    // Step 1: Create a class with constructor values
+    class Employee {
+      constructor(firstname, lastname, yearsWorked) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.yearsWorked = yearsWorked;
+      }
+    }
+
+
+    let emp1 = new Employee("Rahul", "Sharma", 5);
+    let emp2 = new Employee("Sneha", "Patel", 3);
+    let emp3 = new Employee("Amit", "Das", 10);
+
+    let employees = [emp1, emp2, emp3];
+
+    
+    Employee.prototype.details = function() {
+      return this.firstname + " " + this.lastname + 
+             " has worked at the company for " + this.yearsWorked + " years.";
+    };
+
+
+    employees.forEach(function(emp) {
+      console.log("Employee record: " + emp.details());
+    });
+  </script>
+</body>
+</html>

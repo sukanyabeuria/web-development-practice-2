@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Example</title>
+</head>
+<body>
+  <h1>JavaScript Array Example</h1>
+  <p>Open your browser console to see the output.</p>
+
+  <script>
+    let arr = []; 
+    for (let i = 0; i < 100; i++) { 
+      arr.push(i); 
+    }
+
+    console.log(arr);
+
+    
+    document.body.innerHTML += "<p>" + arr.join(", ") + "</p>";
+  </script>
+</body>
+</html>

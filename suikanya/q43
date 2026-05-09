@@ -1,0 +1,15 @@
+<!DOCTYPE html> 
+<html lang="en">
+     <head>
+         <meta charset="UTF-8">
+          <title>ID Check Example</title> 
+          </head> 
+          <body> 
+            <script> 
+             let message = hasID ? 
+             "Access granted: Welcome to the venue!" :
+              "Access denied: You need a valid ID."; 
+              console.log(message);
+ </script>
+  </body>
+   </html>

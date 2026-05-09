@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown Example</title>
+</head>
+<body>
+  <h1>Countdown Demo</h1>
+  <button onclick="countdown(start)">Start Countdown</button>
+  <div id="output"></div>
+
+  <script>
+   
+    let start = 10;
+
+    
+    function countdown(value) {
+     
+      document.getElementById("output").innerHTML += value + "<br>";
+
+     
+      if (value < 1) {
+        return; 
+      }
+
+      
+      countdown(value - 1);
+    }
+
+    
+    function countdownAlt(value) {
+      if (value > 0) {
+        document.getElementById("output").innerHTML += value + "<br>";
+        return countdownAlt(value - 1);
+      }
+      return; 
+    }
+  </script>
+</body>
+</html>

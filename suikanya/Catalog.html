@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+
+
+
+
+let inventory = [];
+
+
+let item1 = {
+  name: "Laptop",
+  model: "Dell Inspiron 15",
+  cost: 55000,
+  quantity: 10
+};
+
+let item2 = {
+  name: "Smartphone",
+  model: "Samsung Galaxy S23",
+  cost: 65000,
+  quantity: 25
+};
+
+let item3 = {
+  name: "Headphones",
+  model: "Sony WH-1000XM5",
+  cost: 30000,
+  quantity: 15
+};
+
+
+inventory.push(item1, item2, item3);
+
+
+console.log("Inventory:", inventory);
+
+
+console.log("Quantity of third item:", inventory[2].quantity);
+
+
+let item4 = {
+  name: "Smartwatch",
+  model: "Apple Watch Series 9",
+  cost: 45000,
+  quantity: 12
+};
+
+inventory.push(item4);
+
+console.log("Model of fourth item:", inventory[3].model);
+</script>
+    </body>
+</html>

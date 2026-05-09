@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q1 - Random Numbers</title>
+</head>
+<body>
+  <h2>Q1: Generate random numbers until 6 appears</h2>
+  <pre id="output1"></pre>
+
+  <script>
+    let out1 = "";
+    let num;
+    do {
+      num = Math.floor(Math.random() * 6) + 1; // 1 to 6
+      out1 += num + "\n";
+    } while (num !== 6);
+
+    document.getElementById("output1").textContent = out1;
+  </script>
+</body>
+</html>

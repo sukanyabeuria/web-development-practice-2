@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Function Expression vs Declaration</title>
+</head>
+<body>
+  <h1>Check the Console!</h1>
+  <button onclick="runExpression()">Run Function Expression</button>
+  <button onclick="runDeclaration()">Run Function Declaration</button>
+
+  <script>
+ 
+    let logMessage = function(message) {
+      console.log("Function Expression says:", message);
+    };
+
+   
+    function runExpression() {
+      logMessage("Hello from the function expression!");
+    }
+
+   
+    function logMessageDeclaration(message) {
+      console.log("Function Declaration says:", message);
+    }
+
+    function runDeclaration() {
+      logMessageDeclaration("Hello from the function declaration!");
+    }
+  </script>
+</body>
+</html>

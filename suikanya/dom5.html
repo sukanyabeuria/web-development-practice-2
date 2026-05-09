@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Window Onload Example</title>
+  <style>
+    #divvy {
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 100px;
+      font-family: Arial, sans-serif;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+   
+    window.onload = function demoNow() {
+      
+     console.log("hi");
+    };
+
+   
+    function changeColor() {
+      document.getElementById("divvy").style.backgroundColor = "orange";
+    }
+
+    
+    function resetColor() {
+      document.getElementById("divvy").style.backgroundColor = "lightblue";
+    }
+  </script>
+</head>
+<body>
+  <div id="divvy" onmouseover="changeColor()" onmouseout="resetColor()">
+    Hover me!
+  </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+let nr1 = 2;
+let nr2 = "2";
+console.log(nr1 * nr2);
+let nrToStr = 6;
+nrToStr = String(nrToStr);
+console.log(nrToStr, typeof nrToStr);
+ 
+let strToNr = "12";
+strToNr = Number(strToNr);
+console.log(strToNr, typeof strToNr);
+ 
+let strToBool = "any string will return true";
+strToBool = Boolean(strToBool);
+console.log(strToBool, typeof strToBool);

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Parameters vs Arguments</title>
+</head>
+<body>
+  <h1>Parameters and Arguments Demo</h1>
+
+  <script>
+    // Function definition with parameters x and y
+    function addTwoNumbers(x, y) {
+      console.log("Adding:", x, "+", y);
+      console.log("Result:", x + y);
+    }
+
+    // Calling the function with arguments
+    addTwoNumbers(3, 4);     // Arguments: 3 and 4
+    addTwoNumbers(12, -90);  // Arguments: 12 and -90
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Extended Calculator</title>
+</head>
+<body>
+  <h1>Extended Calculator Demo</h1>
+
+  <script>
+    
+    let num1 = 20;
+    let num2 = 4;
+
+    
+    let operator = "add"; 
+
+    
+    function calculate(x, y, op = "add") {
+      if (op === "subtract") {
+        return x - y;
+      } else if (op === "multiply") {
+        return x * y;
+      } else if (op === "divide") {
+        return x / y;
+      } else {
+        
+        return x + y;
+      }
+    }
+
+    console.log("Operator:", operator, "Result:", calculate(num1, num2, operator));
+
+    
+    operator = "subtract";
+    console.log("Operator:", operator, "Result:", calculate(num1, num2, operator));
+
+    operator = "multiply";
+    console.log("Operator:", operator, "Result:", calculate(num1, num2, operator));
+
+    operator = "divide";
+    console.log("Operator:", operator, "Result:", calculate(num1, num2, operator));
+
+  
+    console.log("No operator specified, Result:", calculate(num1, num2));
+  </script>
+</body>
+</html>

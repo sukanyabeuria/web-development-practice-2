@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Person Class with Prototype</title>
+</head>
+<body>
+  <h1>Person Class Demo</h1>
+  <pre id="output"></pre>
+
+  <script>
+    
+    class Person { 
+      constructor(firstname, lastname) { 
+        this.firstname = firstname; 
+        this.lastname = lastname; 
+      } 
+      greet() { 
+        console.log("Hi there!"); 
+      } 
+    } 
+
+    
+    Person.prototype.introduce = function () { 
+      console.log("Hi, I'm", this.firstname); 
+    }; 
+
+    
+    Person.prototype.favoriteColor = "green"; 
+
+
+    let p1 = new Person("Maria", "Saga"); 
+    document.getElementById("output").textContent += "p1.favoriteColor: " + p1.favoriteColor + "\n";
+    p1.introduce();
+    document.getElementById("output").textContent += "Introduce p1: Hi, I'm " + p1.firstname + "\n";
+
+
+    let p2 = new Person("John", "Doe"); 
+    document.getElementById("output").textContent += "p2.favoriteColor: " + p2.favoriteColor + "\n";
+    p2.introduce(); 
+    document.getElementById("output").textContent += "Introduce p2: Hi, I'm " + p2.firstname + "\n
+    p2.favoriteColor = "blue"; 
+    document.getElementById("output").textContent += "After overwrite:\n";
+    document.getElementById("output").textContent += "p1.favoriteColor: " + p1.favoriteColor + "\n";
+    document.getElementById("output").textContent += "p2.favoriteColor: " + p2.favoriteColor + "\n";
+  </script>
+</body>
+</html>

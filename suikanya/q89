@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Car Object Example</title>
+</head>
+<body>
+  
+
+  <script>
+    let car = {
+      model: "Civic",
+      make: "Honda",
+      year: 2020,
+      color: "Blue"
+    };
+
+
+    let arrKeys = Object.keys(car);
+
+    
+    for (let i = 0; i < arrKeys.length; i++) {
+      console.log(arrKeys[i] + ": " + car[arrKeys[i]]);
+    }
+  </script>
+</body>
+</html>

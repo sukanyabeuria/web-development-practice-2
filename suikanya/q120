@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Person Class Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    label { display: block; margin-top: 10px; }
+    button { margin-top: 15px; }
+    #output { margin-top: 20px; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Create a Person</h1>
+  
+  <label for="firstname">First Name:</label>
+  <input type="text" id="firstname" placeholder="Enter first name">
+
+  <label for="lastname">Last Name:</label>
+  <input type="text" id="lastname" placeholder="Enter last name">
+
+  <button onclick="createPerson()">Create Person</button>
+  <button onclick="updatePerson()">Update Person</button>
+
+  <div id="output"></div>
+
+  <script>
+    class Person { 
+      #firstname; 
+      #lastname; 
+      constructor(firstname, lastname) { 
+        this.#firstname = firstname; 
+        this.#lastname = lastname; 
+      } 
+      get firstname() { 
+        return this.#firstname; 
+      } 
+      set firstname(firstname) { 
+        this.#firstname = firstname; 
+      } 
+      get lastname() { 
+        return this.#lastname; 
+      } 
+      set lastname(lastname) { 
+        this.#lastname = lastname; 
+      } 
+    }
+
+    let person;
+
+    function createPerson() {
+      const fname = document.getElementById('firstname').value;
+      const lname = document.getElementById('lastname').value;
+      person = new Person(fname, lname);
+      document.getElementById('output').textContent = 
+        `Person created: ${person.firstname} ${person.lastname}`;
+    }
+
+    function updatePerson() {
+      if (!person) {
+        document.getElementById('output').textContent = "No person created yet!";
+        return;
+      }
+      const fname = document.getElementById('firstname').value;
+      const lname = document.getElementById('lastname').value;
+      person.firstname = fname;
+      person.lastname = lname;
+      document.getElementById('output').textContent = 
+        `Person updated: ${person.firstname} ${person.lastname}`;
+    }
+  </script>
+</body>
+</html>

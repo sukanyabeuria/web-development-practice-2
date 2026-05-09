@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript String Methods Demo</title>
+</head>
+<body>
+  <h1>Open your browser console to see the results</h1>
+
+  <script>
+    let poem = "Roses are red, violets are blue, if I can do JS, the";
+
+    
+    let index_re = poem.indexOf("re"); 
+    console.log("indexOf('re'):", index_re);
+
+    
+    if (poem.indexOf("python") != -1) { 
+      console.log("Found 'python' in poem");
+    } else {
+      console.log("'python' not found in poem");
+    }
+
+    
+    let searchStr = "When I see my fellow, I say hello"; 
+    let pos = searchStr.search("lo"); 
+    console.log("search('lo'):", pos);
+
+    let notFound = searchStr.search("JavaScript"); 
+    console.log("search('JavaScript'):", notFound);
+
+    
+    let lastIndex_re = poem.lastIndexOf("re"); 
+    console.log("lastIndexOf('re'):", lastIndex_re);
+
+    
+    let pos1 = poem.charAt(10); 
+    console.log("charAt(10):", pos1);
+
+    let pos2 = poem.charAt(1000); 
+    console.log("charAt(1000):", pos2); 
+
+    
+    let str = "Create a substring"; 
+    let substr1 = str.slice(5); 
+    let substr2 = str.slice(0,3); 
+    console.log("slice(5):", substr1); 
+    console.log("slice(0,3):", substr2);
+  </script>
+</body>
+</html>

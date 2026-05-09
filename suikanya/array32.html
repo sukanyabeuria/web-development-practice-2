@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nesting Arrays Example</title>
+</head>
+<body>
+  <h1>Nesting Arrays</h1>
+  <pre id="output"></pre>
+
+  <script>
+    
+    let originalArray = [1, 2, 3];
+
+    
+    let nestedArray = [originalArray, originalArray, originalArray];
+
+    
+    let outputText = "Nested Array:\n" + JSON.stringify(nestedArray) + "\n\n";
+
+    
+    outputText += "First block, second value: " + nestedArray[0][1] + "\n"; // 2
+    outputText += "Third block, third value: " + nestedArray[2][2] + "\n"; // 3
+
+  
+    outputText += "\nIterating through nested array:\n";
+    for (let i = 0; i < nestedArray.length; i++) {
+      for (let j = 0; j < nestedArray[i].length; j++) {
+        outputText += "Block " + i + ", Index " + j + ": " + nestedArray[i][j] + "\n";
+      }
+    }
+
+   
+    document.getElementById("output").textContent = outputText;
+  </script>
+</body>
+</html>

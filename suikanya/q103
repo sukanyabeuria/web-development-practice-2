@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random Name Description</title>
+</head>
+<body>
+  <h1>Random Name Descriptor</h1>
+  <button onclick="describeName()">Click to Describe a Name</button>
+
+  <script>
+    
+    const words = ["brilliant", "kind", "creative", "strong", "funny", "thoughtful", "amazing", "unique"];
+
+    
+    function describeName() {
+      let name = prompt("Enter a name:");
+
+    
+      let randomWord = words[Math.floor(Math.random() * words.length)];
+
+      
+      console.log(name + " is " + randomWord + "!");
+      alert(name + " is " + randomWord + "!"); 
+    }
+
+   

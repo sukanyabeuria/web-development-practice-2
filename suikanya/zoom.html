@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zoom Rectangle</title>
+  <style>
+    #rectangle {
+      width: 150px;
+      height: 100px;
+      background-color: black;
+      margin: 10px;
+      
+    }
+    .zoom {
+      transform: scale(1.5); 
+    }
+    button {
+      margin: 5px;
+      padding: 8px 12px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div id="rectangle"></div>
+         
+  <button onclick="zoomToggle()">Zoom In/Out</button>
+  
+
+  <script>
+    function zoomToggle() {
+      let div = document.getElementById('rectangle');
+      div.classList.toggle('zoom');
+    }
+  </script>
+</body>
+</html>

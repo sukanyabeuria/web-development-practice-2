@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Array Example</title>
+</head>
+<body>
+  <h1>Array Example</h1>
+  <pre id="output"></pre>
+
+  <script>
+    
+    let myArray = [1, 2, 3];
+
+    
+    let outputText = "Array values: " + myArray.join(", ");
+
+    
+    outputText += "\nFirst value: " + myArray[0];
+    outputText += "\nSecond value: " + myArray[1];
+    outputText += "\nThird value: " + myArray[2];
+
+    outputText += "\n\nIterating through array:";
+    for (let i = 0; i < myArray.length; i++) {
+      outputText += "\nIndex " + i + ": " + myArray[i];
+    }
+
+
+    document.getElementById("output").textContent = outputText;
+  </script>
+</body>
+</html

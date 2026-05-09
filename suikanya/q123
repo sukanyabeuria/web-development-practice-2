@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animal Class Exercise 7.3</title>
+</head>
+<body>
+  <h1>Practice Exercise 7.3</h1>
+  <pre id="output"></pre>
+
+  <script>
+   
+    class Animal {
+      constructor(species, sound) {
+        this.species = species;
+        this.sound = sound;
+      }
+
+      
+      makeSound() {
+        console.log(`${this.species} says ${this.sound}`);
+      }
+    }
+
+    
+    Animal.prototype.action = function() {
+      console.log(`${this.species} is running around!`);
+    };
+
+   
+    let dog = new Animal("Dog", "Woof");
+    let cat = new Animal("Cat", "Meow");
+
+    dog.makeSound();       
+    dog.action();          
+    console.log(dog);     
+
+    cat.makeSound();      
+    cat.action();         
+    console.log(cat);      
+
+  
+    let output = document.getElementById("output");
+    output.textContent += "Dog favorite output:\n";
+    output.textContent += `${dog.species} says ${dog.sound}\n`;
+    output.textContent += "Cat favorite output:\n";
+    output.textContent += `${cat.species} says ${cat.sound}\n`;
+  </script>
+</body>
+</html>

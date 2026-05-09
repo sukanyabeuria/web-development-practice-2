@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q7 - Score Logic</title>
+</head>
+<body>
+  <h2>Q7: Score Logic in Different Styles</h2>
+  <pre id="output"></pre>
+
+  <script>
+    let score = 75;
+    let attendance = 80;
+    let out = "";
+
+    // (A) Nested ternary
+    let gradeTernary = (score === 90) ? "A" :
+                       (score === 75 && attendance === 80) ? "B" :
+                       (score === 50) ? "C" : "Fail";
+    out += "(A) Nested ternary => " + gradeTernary + "\n";
+
+    // (B) Switch
+    let gradeSwitch;
+    switch (true) {
+      case score === 90:
+        gradeSwitch = "A"; break;
+      case score === 75 && attendance === 80:
+        gradeSwitch = "B"; break;
+      case score === 50:
+        gradeSwitch = "C"; break;
+      default:
+        gradeSwitch = "Fail";
+    }
+    out += "(B) Switch => " + gradeSwitch + "\n";
+
+    // (C) If-else
+    let gradeIfElse;
+    if (score === 90) {
+      gradeIfElse = "A";
+    } else if (score === 75 && attendance === 80) {
+      gradeIfElse = "B";
+    } else if (score === 50) {
+      gradeIfElse = "C";
+    } else {
+      gradeIfElse = "Fail";
+    }
+    out += "(C) If-else => " + gradeIfElse + "\n\n";
+
+    // Discussion
+    out += "Discussion:\n";
+    out += " - Nested ternary is compact but harder to read when conditions get complex.\n";
+    out += " - Switch is neat for multiple exact matches, but less natural for compound conditions.\n";
+    out += " - If-else is the most readable here because conditions are clear and explicit.\n";
+
+    document.getElementById("output").textContent = out;
+  </script>
+</body>
+</html>
+uu

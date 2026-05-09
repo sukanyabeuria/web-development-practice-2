@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Q3 - for...of Loop</title>
+</head>
+<body>
+  <h2>Q3: Traverse array with for...of</h2>
+  <pre id="output3"></pre>
+
+  <script>
+    let numbers = [10, 20, 30, 40, 50];
+    let sum = 0;
+
+    for (let value of numbers) {
+      console.log(value);
+      sum += value;
+    }
+
+    let avg = sum / numbers.length;
+
+    document.getElementById("output3").textContent =
+      "Array: " + numbers.join(", ") + "\nSum: " + sum + "\nAverage: " + avg;
+  </script>
+</body>
+</html>

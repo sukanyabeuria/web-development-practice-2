@@ -1,0 +1,21 @@
+!DOCTYPE html> 
+<html lang="en">
+     <head> <meta charset="UTF-8"> 
+        <title>Ask Age Prompt</title> 
+</head>
+ <body> 
+    <button onclick="askAge()">Enter Your Age</button> 
+    <p id="output"></p>
+     <script>
+      function askAge() { let age = prompt("Please enter your age:");
+       if (age !== null && age.trim() !== "") 
+       {
+         document.getElementById("output").textContent = "You entered: " + age + " years old."; 
+
+      } else { 
+        document.getElementById("output").textContent = "No age provided."; } }
+ </script>
+ 
+ 
+
+</body> </html>

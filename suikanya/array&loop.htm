@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Grid Array Example</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript Grid Array Demo</h1>
+  <p>Open the console to see the grid structure. A visual table is also shown below:</p>
+  <div id="gridOutput"></div>
+
+  <script>
+    
+    let grid = [];
+
+
+    let numCells = 64;
+
+    
+    let counter = 0;
+
+    
+    let row;
+
+    
+    for (let i = 0; i <= numCells; i++) {
+      
+      if (counter % 8 === 0) {
+        
+        if (row !== undefined) {
+          grid.push(row);
+        }
+        
+        row = [];
+      }
+
+      row.push(counter);
+
+      
+      if (counter === numCells) {
+        grid.push(row);
+      }
+
+
+      counter++;
+    }
+
+    
+    console.log(grid);
+
+    
+    let output = document.getElementById("gridOutput");
+    let table = document.createElement("table");
+
+    grid.forEach(r => {
+      let tr = document.createElement("tr");
+      r.forEach(cell => {
+        let td = document.createElement("td");
+        td.textContent = cell;
+        tr.appendChild(td);
+      });
+      table.appendChild(tr);
+    });
+
+    output.appendChild(table);
+  </script>
+</body>
+</html>
